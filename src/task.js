@@ -1,8 +1,9 @@
 function createTask() {
   let TaskID = 0
   return class {
-    constructor(content) {
+    constructor(content, priority) {
       this.content = content
+      this.priority = parseInt(priority)
       this.id = ++TaskID
     }
   }
