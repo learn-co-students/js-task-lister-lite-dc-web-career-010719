@@ -14,6 +14,10 @@ button {
   font-size: 7px;
 }
 
+h2 {
+  margin: 6px 0 14px 0;
+}
+
 #main-content {
   position: relative;
   display: flex;
@@ -23,7 +27,7 @@ button {
   border: 1px solid #333;
   background: rgba(255, 255, 255, 0.3);
   padding: 15px 20px 18px 18px;
-  border-radius: 5px;
+  border-radius: a5px;
   box-shadow: 2px 5px 5px #333;
 }
 
@@ -34,4 +38,68 @@ button {
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
+}
+
+#tasks {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 20px 0;
+}
+
+.task {
+  padding: 6px 0;
+  border-bottom: 1px dashed #aaa;
+  position: relative;
+  width: 100%;
+}
+
+.task-title {
+  /* float: left; */
+}
+
+.task-action {
+  /* float: right; */
+  margin-left: 6px;
+  background: white;
+  border: 2px solid #333;
+  transition: all 0.2s ease;
+  border-radius: 3px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.task-action:hover {
+  background: black;
+  color: white;
+}
+
+.task-delete {
+  color: red;
+  border-color: red;
+}
+
+.task-delete:hover {
+  background: red;
+  color: white;
+}
+
+.task::after {
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+}
+
+.priority-1::after {
+  content: '!';
+  color: green;
+}
+
+.priority-2::after {
+  content: '!!';
+  color: yellow;
+}
+
+.priority-3::after {
+  content: '!!!';
+  color: red;
 }
